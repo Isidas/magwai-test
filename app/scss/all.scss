@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Mulish:wght@400;700&display=swap");
+@import "./vendor/variables";
+@import "vendor/_normalize";
+@import "./vendor/_media";
+
+@import "./page/nav";
+@import "./page/main";
+@import "./page/card";
+@import "./page/modal";

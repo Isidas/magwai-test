@@ -1,0 +1,61 @@
+.main {
+  position: relative;
+  margin-top: 130px;
+  width: auto;
+  height: 80vh;
+  background-image: url("../../images/bg_main.webp");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5% 5% 0 0;
+  @include flexAlignment(flex-start, flex-end);
+  padding: 0 70px 50px 70px;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    width: auto;
+    height: 20%;
+    left: 0;
+    top: 80%;
+    right: 0;
+    bottom: 0px;
+    background: linear-gradient(0deg, #131313 0%, rgba(19, 19, 19, 0) 100%);
+    z-index: 2;
+  }
+  .main__text-block {
+    z-index: 5;
+    position: relative;
+    .main__title {
+      @include textStyle($color_white, 42px, 700, normal, "Montserrat");
+    }
+    .main__subtitle {
+      margin-top: 40px;
+      @include textStyle($color_white, 16px, 400, 150%, "Montserrat");
+    }
+    .main__btn {
+      margin-top: 40px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .main__text-block {
+      .main__title {
+        @include textStyle($color_white, 38px, 700, normal, "Montserrat");
+      }
+    }
+    padding: 0 40px 50px 40px;
+  }
+  @media screen and (max-width: 375px) {
+    .main__text-block {
+      .main__title {
+        @include textStyle($color_white, 20px, 700, normal, "Montserrat");
+      }
+      .main__subtitle {
+        margin-top: 20px;
+        @include textStyle($color_white, 14px, 400, 150%, "Montserrat");
+      }
+    }
+    padding: 0 10px 50px 10px;
+  }
+}

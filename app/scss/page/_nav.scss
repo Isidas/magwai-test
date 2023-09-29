@@ -1,0 +1,143 @@
+.navbar {
+  position: fixed;
+  width: calc(100vw - 120px);
+  padding: 30px 70px;
+  top: 0px;
+  left: 0;
+  background-color: $color_dark;
+  z-index: 10;
+  @include flexAlignment(space-between, center);
+  .navbar__burger {
+    display: none;
+  }
+  .navbar__navigation {
+    display: flex;
+    flex-direction: row;
+    .navbar__links {
+      @include flexAlignment(space-between, center);
+      margin-left: 4%;
+      width: 700px;
+      .navbar__link {
+        list-style-type: none;
+        a {
+          @include textStyle($color_white, 14px, 700, 150%, "Montserrat");
+        }
+      }
+    }
+  }
+  .navbar__contacts {
+    @include flexAlignment(center, center);
+    gap: 12px;
+    .phone {
+      width: 92.5px;
+      height: 60px;
+      background-color: transparent;
+      border: 1px solid $color_white;
+      transform: skew(-10deg, 0deg);
+    }
+  }
+
+  @media screen and (max-width: 1411px) {
+    .navbar__navigation {
+      display: flex;
+      flex-direction: row;
+      .navbar__links {
+        @include flexAlignment(space-between, center);
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 700px;
+      }
+    }
+  }
+  @media screen and (max-width: 1357px) {
+    .navbar__burger {
+      display: block;
+      :nth-child(1) {
+        width: 26px;
+        border-radius: 5px;
+      }
+      :nth-child(2) {
+        margin: 7px 0;
+        width: 40px;
+        border-radius: 5px;
+      }
+      :nth-child(3) {
+        width: 32px;
+        border-radius: 5px;
+      }
+      .burder__line {
+        height: 3px;
+        background-color: $color_white;
+      }
+    }
+    .navbar__navigation {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .navbar__links {
+        position: absolute;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 100vw;
+        height: 100vh;
+        background-color: $color_dark;
+        top: 100px;
+        left: 100%;
+        transition: 0.5s ease-in-out;
+        .navbar__link {
+          a {
+            @include textStyle($color_dark, 36px, 700, 150%, "Montserrat");
+            -webkit-text-stroke: 2px $color_text_grey; /* Ширина и цвет контура */
+            text-stroke: 2px $color_text_grey;
+          }
+        }
+      }
+      .show {
+        left: -12px;
+      }
+    }
+  }
+  @media screen and (max-width: 644px) {
+    .navbar__navigation {
+      .navbar__links {
+        .navbar__link {
+          a {
+            @include textStyle($color_dark, 20px, 700, 150%, "Montserrat");
+            -webkit-text-stroke: 1px $color_text_grey; /* Ширина и цвет контура */
+            text-stroke: 1px $color_text_grey;
+          }
+        }
+      }
+    }
+    .navbar__contacts {
+      display: flex;
+      position: absolute;
+      top: 350px;
+      left: 150%;
+      flex-direction: column;
+      transition: 0.7s ease-in-out;
+      .phone {
+        width: 300px;
+      }
+      .submit {
+        width: 300px;
+      }
+    }
+    .show_contacts {
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .navbar__contacts {
+      .phone {
+        width: 200px;
+      }
+      .submit {
+        width: 200px;
+      }
+    }
+  }
+}

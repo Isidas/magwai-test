@@ -1,0 +1,68 @@
+// colors
+
+$color_btn: #c2ab81;
+$color_dark: #131313;
+$color_white: #fff;
+$color_text_dark: #171717;
+$color_text_grey: #666;
+
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: $color_dark;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+// mixins
+@mixin textStyle($color, $fsize, $fweigth, $lheight, $font) {
+  color: $color;
+  font-family: $font, sans-serif;
+  font-size: $fsize;
+  font-style: normal;
+  font-weight: $fweigth;
+  line-height: $lheight;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@mixin flexAlignment($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// style elements
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  width: 282.5px;
+  height: 60px;
+  background-color: $color_btn;
+  border: none;
+  @include textStyle($color_white, 12px, 700, 150%, "Montserrat");
+  transform: skew(-10deg, 0deg);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 100%;
+    top: 0;
+    right: -7px;
+    background-color: $color_white;
+  }
+  @media screen and (max-width: 768px) {
+    width: 200px;
+    @include textStyle($color_white, 12px, 700, 150%, "Montserrat");
+  }
+}
+.card__btn-black {
+  padding: 16px 80px;
+  background-color: $color_text_dark;
+  @include textStyle($color_white, 14px, 600, 100%, "Mulish");
+  text-transform: none;
+}

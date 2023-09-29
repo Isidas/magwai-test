@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <title>Магвай</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="css/main.min.css?10" />
+</head>
+
+<body>
+    <section class="container">
+        <nav class="navbar">
+            <div class="navbar__burger burger">
+                <div class="burder__line"></div>
+                <div class="burder__line"></div>
+                <div class="burder__line"></div>
+            </div>
+            <div class="navbar__navigation">
+                <a class="navbar__logo" href="#"><img src="./images/icons/logo.svg" alt="Logo" /></a>
+                <ul class="navbar__links">
+                    <li class="navbar__link"><a href="#">УСЛУГИ</a></li>
+                    <li class="navbar__link"><a href="#">АБОНЕМЕНТЫ</a></li>
+                    <li class="navbar__link"><a href="#">ПОЧЕМУ МЫ</a></li>
+                    <li class="navbar__link"><a href="#">ОБОРУДОВАНИЕ</a></li>
+                    <li class="navbar__link"><a href="#">АКЦИИ</a></li>
+                    <li class="navbar__link"><a href="#">FAQ</a></li>
+                    <li class="navbar__link"><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="navbar__contacts">
+                <button class="navbar__btn phone">
+                    <img src="./images/icons/phone.svg" alt="phone" />
+                </button>
+                <button class="navbar__btn btn submit">ОСТАВИТЬ ЗАЯВКУ</button>
+            </div>
+        </nav>
+        <section class="main">
+            <div class="main__text-block">
+                <h1 class="main__title">
+                    Полет Илона Маска <br />
+                    и DOGIE COIN
+                </h1>
+                <p class="main__subtitle">
+                    В прошлый четверг все офигели от полета DOGIE COIN на марс.
+                </p>
+                <button class="main__btn btn submit">ОСТАВИТЬ ЗАЯВКУ</button>
+            </div>
+        </section>
+    </section>
+    <section class="cards">
+        <h2 class="cards__title">Карточки</h2>
+        <div class="cards__block"></div>
+        <button class="cards__btn btn add-card">ЗАГРУЗИТЬ ЕЩЕ</button>
+    </section>
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">
+                <img src="./images/icons/cross.svg" alt="img" />
+            </div>
+            <h2 class="modal__subtitle">Просто заполните форму заявки</h2>
+            <p class="modal__descr">и мы перезвоним вам в течении 10 минут</p>
+            <form class="modal__form" action="#">
+                <input name="name" placeholder="Ваше имя" type="text" />
+                <input name="phone" placeholder="Ваш телефон" type="number" />
+                <input name="email" placeholder="Ваш E-mail" type="email" />
+                <button class="btn button_submit">заказать консультацию</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
