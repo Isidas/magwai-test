@@ -17,7 +17,8 @@
       flex-direction: column;
       justify-content: space-between;
       background-color: $color_white;
-      transition: 0.5s ease;
+      transition: 0.3s ease;
+
       .card__img {
         width: 100%;
       }
@@ -42,6 +43,9 @@
           cursor: pointer;
           margin-top: 25px;
         }
+      }
+      &:hover {
+        transform: translateY(-10px);
       }
     }
   }

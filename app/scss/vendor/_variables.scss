@@ -55,6 +55,7 @@ body {
   border: none;
   @include textStyle($color_white, 12px, 700, 150%, "Montserrat");
   transform: skewX(-20deg);
+  transition: 0.2s ease;
   .skewed-text {
     display: inline-block;
     transform: skewX(20deg);
@@ -67,6 +68,9 @@ body {
     top: 0;
     right: -7px;
     background-color: $color_white;
+  }
+  &:hover {
+    transform: skewX(-20deg) scale(1.03);
   }
   @media screen and (max-width: 768px) {
     width: 200px;

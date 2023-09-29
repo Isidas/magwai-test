@@ -33,7 +33,11 @@
       height: 60px;
       background-color: transparent;
       border: 1px solid $color_white;
+      transition: 0.2s ease;
       transform: skewX(-20deg);
+      &:hover {
+        transform: skewX(-20deg) scale(1.03);
+      }
     }
   }
 
@@ -89,7 +93,7 @@
         .navbar__link {
           a {
             @include textStyle($color_dark, 36px, 700, 150%, "Montserrat");
-            -webkit-text-stroke: 2px $color_text_grey; /* Ширина и цвет контура */
+            -webkit-text-stroke: 2px $color_text_grey;
           }
         }
       }
