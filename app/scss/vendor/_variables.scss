@@ -45,7 +45,7 @@ body {
   background-color: $color_btn;
   border: none;
   @include textStyle($color_white, 12px, 700, 150%, "Montserrat");
-  transform: skew(-10deg, 0deg);
+  clip-path: polygon(10% 0%, 100% 0, 90% 100%, 0% 100%);
   &::before {
     position: absolute;
     content: "";

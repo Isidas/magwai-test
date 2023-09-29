@@ -45,6 +45,7 @@
       background-color: transparent;
       @include textStyle($color_btn, 16px, 700, normal, "Montserrat");
       border: 1px solid $color_btn;
+      text-transform: none;
       border-radius: 4px;
       &:focus {
         outline: none;

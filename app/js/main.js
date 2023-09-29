@@ -14,9 +14,9 @@ const submitButton = document.querySelector(".button_submit");
 
 const rndImage = () => {
   const imgItem = [
-    "./images/cardImg/2.png",
-    "./images/cardImg/1.png",
-    "./images/cardImg/5.png",
+    "./images/cardImg/2.webp",
+    "./images/cardImg/1.webp",
+    "./images/cardImg/5.webp",
   ];
   let rnd = Math.floor(Math.random() * 3);
   return imgItem[rnd];

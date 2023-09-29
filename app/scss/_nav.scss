@@ -33,7 +33,7 @@
       height: 60px;
       background-color: transparent;
       border: 1px solid $color_white;
-      transform: skew(-10deg, 0deg);
+      transform: skew(-25deg, 0deg);
     }
   }
 
@@ -119,7 +119,7 @@
       flex-direction: column;
       transition: 0.7s ease-in-out;
       .phone {
-        width: 300px;
+        width: 270px;
       }
       .submit {
         width: 300px;
